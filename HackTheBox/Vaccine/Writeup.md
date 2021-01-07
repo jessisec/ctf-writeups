@@ -127,7 +127,7 @@ Password: qwerty789
 ## Foothold
 ### HTTP Access
 Browsing to http://10.10.10.46/ presents us with a login screen.  
-![login screen webpage](screenshots/login_screen.png)  
+![login screen webpage](screenshots/login_screen.php.png)  
 The credentials admin / qwerty789 successfully logs us in. We're now presented with a catalogue.  
 ![catalogue](screenshots/catalogue.png)  
 Appears to be a car catalogue with search functionality. The search function results in this this request: http://10.10.10.46/dashboard.php?search=a  
