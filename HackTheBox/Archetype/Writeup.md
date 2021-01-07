@@ -191,7 +191,7 @@ archetype\sql_svc
 ~~~
 ## PrivEsc
 ### Checking Console History
-Since the sql_svc account is both a service account and normal user account, it's like an administrator has logged in to the server with the account before and possibly ran commands as the user. I can access the console history for the user and inspect for anything useful.
+Since the sql_svc account is both a service account and a normal user account, it's likely an administrator has logged in to the server with the account before and possibly ran commands as the user. I can access the console history for the user and inspect for anything useful.
 ~~~Bash
 # type C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 net.exe use T: \\Archetype\backups /user:administrator MEGACORP_4dm1n!!
