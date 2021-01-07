@@ -108,14 +108,6 @@ session_start();
       header("Location: dashboard.php");
     }
   }
-?><?php
-session_start();
-  if(isset($_POST['username']) && isset($_POST['password'])) {
-    if($_POST['username'] === 'admin' && md5($_POST['password']) === "2cb42f8734ea607eefed3b70af13bbd3") {
-      $_SESSION['login'] = "true";
-      header("Location: dashboard.php");
-    }
-  }
 ?>
 ~~~
 So now I needed to crack the hash **2cb42f8734ea607eefed3b70af13bbd3**.  
