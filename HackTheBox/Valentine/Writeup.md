@@ -231,7 +231,7 @@ Last login: Fri Feb 16 14:50:29 2018 from 10.10.14.3
 hype@Valentine:~$ whoami
 hype
 ~~~
-Excellent, I can go ahead and easily capture the user.txt flag in /home/hype/desktop. Time to do some file browsing for further enumeration as the user this type.  
+Excellent, I can go ahead and easily capture the user.txt flag in /home/hype/desktop. Time to do some file browsing for further enumeration as the user this time.  
 ### File Browsing
 I browsed the directories for anything interesting and checked which groups this user belongs to.  
 ~~~Bash
