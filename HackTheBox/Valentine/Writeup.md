@@ -267,7 +267,7 @@ And after confirming that hype has access to the /.devs directory, I should be a
 ~~~Bash
 tmux -S /.devs/dev_sess
 ~~~
-And in return, we're not root.  
+And in return, we're now root.  
 ~~~Bash
 root@Valentine:/home/hype# whoami
 root
